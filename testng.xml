@@ -4,23 +4,34 @@
 
 <suite name="TestSuite" parallel="tests" thread-count="1">
 
+    <listeners>
+        <listener class-name="Utilities.Listeners" />
+    </listeners>
+
     <test name="ChromeTest">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="LoginCases">
+
+            <class name="Tests.LoginTests">
             </class>
-            <class name="FavoriteCases">
+
+            <class name="Tests.FavoriteTests">
             </class>
+
         </classes>
     </test>
 
     <test name="FirefoxTest">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="LoginCases">
+
+            <class name="Tests.LoginTests">
             </class>
-            <class name="FavoriteCases">
+
+            <class name="Tests.FavoriteTests">
             </class>
+
         </classes>
     </test>
+
 </suite>
